@@ -22,7 +22,7 @@ class SCSSLint extends XmlBase
       command.push('scss-lint')
 
     if userSCSSLintConfig?
-      command.push("--config '#{userSCSSLintConfig}'")
+      command.push("-c", "#{userSCSSLintConfig}")
 
     command.push('--format', 'XML')
     command.push(@filePath)
